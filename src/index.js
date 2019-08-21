@@ -36,13 +36,13 @@ var images = ["./img/burberry.png",
 
 var images = shuffle(images);
 
-//Set span titles to corresponding image name
+//Set span titles to corresponding image name(把图片设置为span的name属性)
 for (var i = 1; i <= numberOfImages; ++i) {
     $('#' + i).attr("name", images[i - 1]);
 }
 
-//Display image when question mark is clicked
-$("span").click(function() {
+//Display image when question mark is clicked（点击问号的时候显示相对应的图片）
+$("span").click(function () {
     //Return previous guesses to question marks if they didn't match
     if (reset === 1 && matched === 0) {
         $('#' + id1).children("img").attr("src", "./img/question-icon.png");
@@ -107,7 +107,8 @@ function resetChosenElements() {
     chosen[1] = "*";
 }
 
+//打乱图片数组中图片的顺序
 function shuffle(o) {
-    for (var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+    for (var j, x, l = i = o.length; i; j = Math.floor(Math.random() * l), x = o[--i], o[i] = o[j], o[j] = x) ;
     return o;
 };
