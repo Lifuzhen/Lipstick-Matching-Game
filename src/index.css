@@ -1,0 +1,29 @@
+body{
+    text-align: center;
+    background: #F0F2F5;
+}
+.board{
+      margin: auto;
+      padding: 30px;
+      border-width: 30px;
+      border-radius: 20px;
+      background: #Ff763b;
+      width: 390px;
+  }
+
+.board >p{
+    color: #fff;
+}
+.board span{
+    display: inline-block;
+}
+img{
+    border: 5px solid #ff763b;
+}
+img:hover
+{
+    border-style: solid;
+    border-width: 5px;
+    border-color: gray;
+    border-radius: 10px;
+}
